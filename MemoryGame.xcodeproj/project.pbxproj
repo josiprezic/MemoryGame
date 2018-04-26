@@ -12,6 +12,8 @@
 		D72EDC9C208DD31A00B03707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EDC9A208DD31A00B03707 /* Main.storyboard */; };
 		D72EDC9E208DD31A00B03707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72EDC9D208DD31A00B03707 /* Assets.xcassets */; };
 		D72EDCA1208DD31A00B03707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EDC9F208DD31A00B03707 /* LaunchScreen.storyboard */; };
+		D74CEB00208E049E00CC8647 /* Concetration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CEAFF208E049E00CC8647 /* Concetration.swift */; };
+		D74CEB02208E057200CC8647 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CEB01208E057200CC8647 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D72EDC9D208DD31A00B03707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D72EDCA0208DD31A00B03707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D72EDCA2208DD31A00B03707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74CEAFF208E049E00CC8647 /* Concetration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concetration.swift; sourceTree = "<group>"; };
+		D74CEB01208E057200CC8647 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				D72EDC96208DD31A00B03707 /* AppDelegate.swift */,
 				D72EDC98208DD31A00B03707 /* ViewController.swift */,
+				D74CEAFF208E049E00CC8647 /* Concetration.swift */,
+				D74CEB01208E057200CC8647 /* Card.swift */,
 				D72EDC9A208DD31A00B03707 /* Main.storyboard */,
 				D72EDC9D208DD31A00B03707 /* Assets.xcassets */,
 				D72EDC9F208DD31A00B03707 /* LaunchScreen.storyboard */,
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72EDC99208DD31A00B03707 /* ViewController.swift in Sources */,
+				D74CEB00208E049E00CC8647 /* Concetration.swift in Sources */,
 				D72EDC97208DD31A00B03707 /* AppDelegate.swift in Sources */,
+				D74CEB02208E057200CC8647 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +283,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GVCJT5546;
+				DEVELOPMENT_TEAM = SM7U8AATW4;
 				INFOPLIST_FILE = Test2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qsd.Test2App;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qsd.Test2App1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -290,10 +298,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GVCJT5546;
+				DEVELOPMENT_TEAM = SM7U8AATW4;
 				INFOPLIST_FILE = Test2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qsd.Test2App;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qsd.Test2App1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
