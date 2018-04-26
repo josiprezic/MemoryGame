@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D72EDC93208DD31A00B03707 /* Test2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72EDC93208DD31A00B03707 /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EDC96208DD31A00B03707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D72EDC98208DD31A00B03707 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D72EDC9B208DD31A00B03707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		D72EDC94208DD31A00B03707 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D72EDC93208DD31A00B03707 /* Test2App.app */,
+				D72EDC93208DD31A00B03707 /* MemoryGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D72EDC92208DD31A00B03707 /* Test2App */ = {
+		D72EDC92208DD31A00B03707 /* MemoryGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D72EDCA5208DD31A00B03707 /* Build configuration list for PBXNativeTarget "Test2App" */;
+			buildConfigurationList = D72EDCA5208DD31A00B03707 /* Build configuration list for PBXNativeTarget "MemoryGame" */;
 			buildPhases = (
 				D72EDC8F208DD31A00B03707 /* Sources */,
 				D72EDC90208DD31A00B03707 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = Test2App;
+			name = MemoryGame;
 			productName = Test2App;
-			productReference = D72EDC93208DD31A00B03707 /* Test2App.app */;
+			productReference = D72EDC93208DD31A00B03707 /* MemoryGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D72EDC8E208DD31A00B03707 /* Build configuration list for PBXProject "Test2App" */;
+			buildConfigurationList = D72EDC8E208DD31A00B03707 /* Build configuration list for PBXProject "MemoryGame" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D72EDC92208DD31A00B03707 /* Test2App */,
+				D72EDC92208DD31A00B03707 /* MemoryGame */,
 			);
 		};
 /* End PBXProject section */
@@ -311,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D72EDC8E208DD31A00B03707 /* Build configuration list for PBXProject "Test2App" */ = {
+		D72EDC8E208DD31A00B03707 /* Build configuration list for PBXProject "MemoryGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D72EDCA3208DD31A00B03707 /* Debug */,
@@ -320,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D72EDCA5208DD31A00B03707 /* Build configuration list for PBXNativeTarget "Test2App" */ = {
+		D72EDCA5208DD31A00B03707 /* Build configuration list for PBXNativeTarget "MemoryGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D72EDCA6208DD31A00B03707 /* Debug */,
