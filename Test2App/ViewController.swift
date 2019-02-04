@@ -7,7 +7,7 @@ class ViewController: UIViewController {
     @IBOutlet private var cardButtons: [UIButton]!
     
     private lazy var game = Concetration(numberOfPairsOfCards: numberOfPairsOfCards)
-    private var emojiChoices = ["🍒","🐞","🐌","🍗","🎧","🇵🇱","😀"]
+    private var emojiChoices = ["🍒","🐞","🐌","🍗","🎧","🇵🇱","😀","🥶", "🎃", "⛑", "🐥", "🎱"]
     private var emoji = [Card:String]()
     private var timer = Timer()
     private var seconds = 0.0
