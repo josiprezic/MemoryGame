@@ -2,48 +2,48 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    @IBOutlet private weak var timerLabel: UILabel!
-    @IBOutlet private weak var gameOverLabel: UILabel!
+    //
+    // MARK: - OUTLETS
+    //
+    
+    @IBOutlet private var timerLabel: UILabel!
+    @IBOutlet private var gameOverLabel: UILabel!
     @IBOutlet private var cardButtons: [UIButton]!
+    
+    //
+    // MARK: - VARIABLES
+    //
     
     private lazy var game = Concetration(numberOfPairsOfCards: numberOfPairsOfCards)
     private var emojiChoices = ["🍒","🐞","🐌","🍗","🎧","🇵🇱","😀","🥶", "🎃", "⛑", "🐥", "🎱"]
     private var emoji = [Card:String]()
     private var timer = Timer()
     private var seconds = 0.0
+    private var numberOfPairsOfCards: Int { return (cardButtons.count + 1) / 2 }
 
+    //
+    // MARK: - VIEW METHODS
+    //
     
     override func viewWillAppear(_ animated: Bool) {
+        cardButtons.forEach{ btn in
+            btn.layer.cornerRadius = 5.0
+            btn.clipsToBounds = true
+        }
         super.viewWillAppear(animated)
-        
         view.backgroundColor = UIHelper.AppColors.GRAY_DARK
         title = "Memory Game"
     }
     
+    //
+    // MARK: - CUSTOM METHODS
+    //
     
     func scheduledTimerWithTimeInterval(){
         self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (time) in
             self.seconds += 0.1
             self.timerLabel.text = "Timer : \(round(self.seconds * 1000) / 1000)"
         }
-    }
-
-    var numberOfPairsOfCards: Int {
-        return (cardButtons.count + 1) / 2
-    }
-    
-    @IBAction private func touchCard(_ sender: UIButton) {
-        //start timer
-        if seconds == 0.0 {
-            scheduledTimerWithTimeInterval()
-        }
-        
-        //flip animation
-        UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        
-        let cardNumber = cardButtons.index(of: sender)
-        game.chooseCard(at: cardNumber!)
-        updateViewFromModel()
     }
 
     private func updateViewFromModel() {
@@ -87,27 +87,21 @@ class GameViewController: UIViewController {
     }
     
     private func hideAllCards() {
-        for button in cardButtons {
-            button.isHidden = true
-        }
+        for button in cardButtons { button.isHidden = true }
+    }
+    
+    //
+    // MARK: - ACTIONS
+    //
+    
+    @IBAction private func touchCard(_ sender: UIButton) {
+        //start timer
+        if seconds == 0.0 { scheduledTimerWithTimeInterval() }
+        
+        //flip animation
+        UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        let cardNumber = cardButtons.index(of: sender)
+        game.chooseCard(at: cardNumber!)
+        updateViewFromModel()
     }
 }
-
-extension Int {
-    var random: Int {
-        get {
-            if self > 0 {
-                return Int(arc4random_uniform(UInt32(self)))
-            }
-            else if self < 0 {
-                return Int(arc4random_uniform(UInt32(abs(self))))
-            }
-            else {
-                return 0
-            }
-        }
-    }
-}
-
-
-
