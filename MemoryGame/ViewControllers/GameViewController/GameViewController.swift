@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     
     @IBOutlet private weak var timerLabel: UILabel!
     @IBOutlet private weak var gameOverLabel: UILabel!
@@ -12,6 +12,15 @@ class ViewController: UIViewController {
     private var timer = Timer()
     private var seconds = 0.0
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        view.backgroundColor = UIHelper.AppColors.GRAY_DARK
+        title = "Memory Game"
+    }
+    
+    
     func scheduledTimerWithTimeInterval(){
         self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (time) in
             self.seconds += 0.1
