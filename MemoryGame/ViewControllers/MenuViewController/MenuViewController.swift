@@ -10,28 +10,32 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
-    
+    //
     // MARK: - IBOUTLETS
-    
+    //
     
     @IBOutlet var btnNewGame: UIButton!
+    @IBOutlet var imgLogo: UIImageView!
     
-    
+    //
     // MARK: - VIEW METHODS
+    //
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         view.backgroundColor = UIHelper.AppColors.GRAY_DARK
         title = "Menu"
-        btnNewGame.layer.cornerRadius = 5.0
+        btnNewGame.layer.cornerRadius = 10.0
         btnNewGame.clipsToBounds = true
     }
     
-    
+    //
     // MARK: - ACTIONS
-    
+    //
     
     @IBAction func btnNewGamePressed(_ sender: UIButton) {
         navigationController?.pushViewController(GameViewController.fromStoryboard(), animated: true)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RevealingSplashView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
 
         self.window?.makeKeyAndVisible()
+        showSplashView()
+
         return true
     }
     
@@ -36,5 +39,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) { }
 
     func applicationWillTerminate(_ application: UIApplication) { }
+    
+    //
+    // MARK: - CUSTOM METHODS
+    //
+    
+    func showSplashView(delay: TimeInterval = 1.2) {
+        let splashIconColor = UIColor.black
+        let splashBackgroundColor = UIHelper.AppColors.GRAY_LIGHT
+        let splashImage = #imageLiteral(resourceName: "lightBulb")
+        let splashInitialSize = CGSize(width: 100, height: 100)
+        let splashView = RevealingSplashView(iconImage: splashImage, iconInitialSize: splashInitialSize, backgroundColor: splashBackgroundColor)
+        splashView.useCustomIconColor = false
+        splashView.iconColor = splashIconColor
+        splashView.delay = delay
+        
+        self.window?.addSubview(splashView)
+        splashView.startAnimation() {}
+    }
 }
 
