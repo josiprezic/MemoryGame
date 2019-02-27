@@ -19,6 +19,7 @@
 		E2832ACD220892C400C4087A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2832ACC220892C400C4087A /* MenuViewController.swift */; };
 		E2832ACF220892D200C4087A /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2832ACE220892D200C4087A /* MenuViewController.storyboard */; };
 		E2832AD122089AED00C4087A /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2832AD022089AED00C4087A /* UIHelper.swift */; };
+		E2F363E222273D6800C384C3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F363E122273D6800C384C3 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		E2832ACC220892C400C4087A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E2832ACE220892D200C4087A /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
 		E2832AD022089AED00C4087A /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		E2F363E122273D6800C384C3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F1D8A9303A627C4A1BFA23B5 /* Pods-MemoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +92,7 @@
 		D72EDC95208DD31A00B03707 /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
-				E2832AC7220891BD00C4087A /* Utils */,
+				E2832AC7220891BD00C4087A /* Helpers */,
 				E2832AC6220890E100C4087A /* Model */,
 				E2832AC4220890B100C4087A /* SupportingFiles */,
 				E2832AC32208909000C4087A /* Resources */,
@@ -104,6 +106,7 @@
 			children = (
 				D72EDC9D208DD31A00B03707 /* Assets.xcassets */,
 				D72EDC9F208DD31A00B03707 /* LaunchScreen.storyboard */,
+				E2F363E122273D6800C384C3 /* Strings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -113,6 +116,7 @@
 			children = (
 				D72EDCA2208DD31A00B03707 /* Info.plist */,
 				D72EDC96208DD31A00B03707 /* AppDelegate.swift */,
+				E2832AC8220891DD00C4087A /* Extensions.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -135,13 +139,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E2832AC7220891BD00C4087A /* Utils */ = {
+		E2832AC7220891BD00C4087A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E2832AC8220891DD00C4087A /* Extensions.swift */,
 				E2832AD022089AED00C4087A /* UIHelper.swift */,
 			);
-			path = Utils;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E2832ACA2208927D00C4087A /* GameViewController */ = {
@@ -286,6 +289,7 @@
 			files = (
 				E2832AC9220891DD00C4087A /* Extensions.swift in Sources */,
 				E2832ACD220892C400C4087A /* MenuViewController.swift in Sources */,
+				E2F363E222273D6800C384C3 /* Strings.swift in Sources */,
 				D72EDC99208DD31A00B03707 /* GameViewController.swift in Sources */,
 				D74CEB00208E049E00CC8647 /* Concetration.swift in Sources */,
 				D72EDC97208DD31A00B03707 /* AppDelegate.swift in Sources */,

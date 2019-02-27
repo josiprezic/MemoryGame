@@ -10,6 +10,10 @@ import Foundation
 
 struct Concetration {
     
+    //
+    // MARK: - VARIABLES
+    //
+    
     private(set) var cards = [Card]()
 
     private var indexOfOneAndOnlyFacedUpCard: Int? {
@@ -24,6 +28,10 @@ struct Concetration {
         }
     }
     
+    //
+    // MARK: - INIT
+    //
+    
     init(numberOfPairsOfCards: Int) {
         for _ in 1...numberOfPairsOfCards {
             let card = Card()
@@ -32,6 +40,10 @@ struct Concetration {
         
         if cards.count >= 4 { shuffleCards() }
     }
+    
+    //
+    // MARK: - METHODS
+    //
     
     mutating func shuffleCards() {
         var random1: Int
@@ -47,7 +59,7 @@ struct Concetration {
     }
 
     mutating func chooseCard(at index: Int) {
-        assert(cards.indices.contains(index), "Concetration.chooseCard: choosen index is not valid")
+        assert(cards.indices.contains(index), Strings.Concetration.indexNotValid)
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFacedUpCard, matchIndex != index {
                 if cards[matchIndex] == cards[index] {

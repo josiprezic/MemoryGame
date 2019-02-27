@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
     //
     
     private lazy var game = Concetration(numberOfPairsOfCards: numberOfPairsOfCards)
-    private var emojiChoices = ["🍒","🐞","🐌","🍗","🎧","🇵🇱","😀","🥶", "🎃", "⛑", "🐥", "🎱"]
+    private var emojiChoices = Strings.GameVC.emojis
     private var emoji = [Card:String]()
     private var timer = Timer()
     private var seconds = 0.0
@@ -32,7 +32,7 @@ class GameViewController: UIViewController {
         }
         super.viewWillAppear(animated)
         view.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        title = "Memory Game"
+        title = Strings.GameVC.title
     }
     
     //
@@ -40,9 +40,9 @@ class GameViewController: UIViewController {
     //
     
     func scheduledTimerWithTimeInterval(){
-        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (time) in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             self.seconds += 0.1
-            self.timerLabel.text = "Timer : \(round(self.seconds * 1000) / 1000)"
+            self.timerLabel.text = "\(Strings.GameVC.timer) : \(round(self.seconds * 1000) / 1000)"
         }
     }
 
@@ -73,7 +73,7 @@ class GameViewController: UIViewController {
         if(emoji[card] == nil), emojiChoices.count > 0 {
             emoji[card] = emojiChoices.remove(at: emojiChoices.count.random)
         }
-        return emoji[card] ?? "?"
+        return emoji[card] ?? Strings.GameVC.questionMark
     }
     
     private func allMatched() -> Bool {

@@ -28,7 +28,7 @@ class MenuViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        title = "Menu"
+        title = Strings.MenuVC.menuTitle
         btnNewGame.layer.cornerRadius = 10.0
         btnNewGame.clipsToBounds = true
     }
