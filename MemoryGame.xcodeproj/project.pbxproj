@@ -19,6 +19,8 @@
 		E2832ACD220892C400C4087A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2832ACC220892C400C4087A /* MenuViewController.swift */; };
 		E2832ACF220892D200C4087A /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2832ACE220892D200C4087A /* MenuViewController.storyboard */; };
 		E2832AD122089AED00C4087A /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2832AD022089AED00C4087A /* UIHelper.swift */; };
+		E288457922286B4C00C4F9C5 /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E288457822286B4C00C4F9C5 /* ScoreboardViewController.swift */; };
+		E288457B22286B8600C4F9C5 /* ScoreboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */; };
 		E2F363E222273D6800C384C3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F363E122273D6800C384C3 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		E2832ACC220892C400C4087A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E2832ACE220892D200C4087A /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
 		E2832AD022089AED00C4087A /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		E288457822286B4C00C4F9C5 /* ScoreboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
+		E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScoreboardViewController.storyboard; sourceTree = "<group>"; };
 		E2F363E122273D6800C384C3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F1D8A9303A627C4A1BFA23B5 /* Pods-MemoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +130,7 @@
 			children = (
 				E2832ACB2208929600C4087A /* MenuViewController */,
 				E2832ACA2208927D00C4087A /* GameViewController */,
+				E288457722286B2700C4F9C5 /* ScoreboardViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +168,15 @@
 				E2832ACE220892D200C4087A /* MenuViewController.storyboard */,
 			);
 			path = MenuViewController;
+			sourceTree = "<group>";
+		};
+		E288457722286B2700C4F9C5 /* ScoreboardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E288457822286B4C00C4F9C5 /* ScoreboardViewController.swift */,
+				E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */,
+			);
+			path = ScoreboardViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E288457B22286B8600C4F9C5 /* ScoreboardViewController.storyboard in Resources */,
 				E2832ACF220892D200C4087A /* MenuViewController.storyboard in Resources */,
 				D72EDCA1208DD31A00B03707 /* LaunchScreen.storyboard in Resources */,
 				D72EDC9E208DD31A00B03707 /* Assets.xcassets in Resources */,
@@ -288,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2832AC9220891DD00C4087A /* Extensions.swift in Sources */,
+				E288457922286B4C00C4F9C5 /* ScoreboardViewController.swift in Sources */,
 				E2832ACD220892C400C4087A /* MenuViewController.swift in Sources */,
 				E2F363E222273D6800C384C3 /* Strings.swift in Sources */,
 				D72EDC99208DD31A00B03707 /* GameViewController.swift in Sources */,

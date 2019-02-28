@@ -15,6 +15,7 @@ class MenuViewController: UIViewController {
     //
     
     @IBOutlet var btnNewGame: UIButton!
+    @IBOutlet var btnScoreboard: UIButton!
     @IBOutlet var imgLogo: UIImageView!
     
     //
@@ -23,14 +24,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        view.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        title = Strings.MenuVC.menuTitle
-        btnNewGame.layer.cornerRadius = 10.0
-        btnNewGame.clipsToBounds = true
+        configureUI()
     }
     
     //
@@ -41,5 +35,22 @@ class MenuViewController: UIViewController {
         navigationController?.pushViewController(GameViewController.fromStoryboard(), animated: true)
     }
     
+    @IBAction func btnScoreboardPressed(_ sender: Any) {
+        navigationController?.pushViewController(ScoreboardViewController.fromStoryboard(), animated: true)
+    }
+    
+    //
+    // MARK: - METHODS
+    //
+    
+    private final func configureUI() {
+        view.backgroundColor = UIHelper.AppColors.GRAY_DARK
+        title = Strings.MenuVC.menuTitle
+        
+        [btnNewGame, btnScoreboard].forEach { btn in
+            btn?.layer.cornerRadius = 10.0
+            btn?.clipsToBounds = true
+        }
+    }
 
 }

@@ -24,4 +24,8 @@ struct Strings {
         static let timer = "Timer"
         static let questionMark = "?"
     }
+    
+    struct ScoreboardVC {
+        static let title = "Scoreboard"
+    }
 }
