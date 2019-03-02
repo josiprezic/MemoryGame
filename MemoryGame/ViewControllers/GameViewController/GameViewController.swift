@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
     //
     
     private lazy var game = Concetration(numberOfPairsOfCards: numberOfPairsOfCards)
-    private var emojiChoices = Strings.GameVC.emojis
+    private var emojiChoices = Constants.GameVC.emojis
     private var emoji = [Card:String]()
     private var timer = Timer()
     private var seconds = 0.0
@@ -26,23 +26,35 @@ class GameViewController: UIViewController {
     //
     
     override func viewWillAppear(_ animated: Bool) {
-        cardButtons.forEach{ btn in
-            btn.layer.cornerRadius = 5.0
-            btn.clipsToBounds = true
-        }
         super.viewWillAppear(animated)
-        view.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        title = Strings.GameVC.title
+        configure()
     }
     
     //
     // MARK: - CUSTOM METHODS
     //
     
+    private final func configure() {
+        configureView()
+        configureCollectionView()
+    }
+    
+    private final func configureView() {
+        title = Constants.GameVC.title
+        view.backgroundColor = UIHelper.AppColors.GRAY_DARK
+    }
+    
+    private final func configureCollectionView() {
+        cardButtons.forEach { btn in
+            btn.layer.cornerRadius = 5.0
+            btn.clipsToBounds = true
+        }
+    }
+    
     func scheduledTimerWithTimeInterval(){
         self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             self.seconds += 0.1
-            self.timerLabel.text = "\(Strings.GameVC.timer) : \(round(self.seconds * 1000) / 1000)"
+            self.timerLabel.text = "\(Constants.GameVC.timer) : \(round(self.seconds * 1000) / 1000)"
         }
     }
 
@@ -54,8 +66,7 @@ class GameViewController: UIViewController {
                 button.setTitle(emoji(for: card), for: .normal)
                 button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             }
-            else
-            {
+            else {
                 button.setTitle("", for: .normal)
                 button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
             }
@@ -63,9 +74,13 @@ class GameViewController: UIViewController {
         
         if allMatched() {
             gameOverLabel.numberOfLines = 0
-            gameOverLabel.text = "Congratulations! \n TIME: \(round(seconds*10)/10) seconds"
+            let time = round(seconds*10)/10
+            gameOverLabel.text = "Congratulations! \n TIME: \(time) seconds"
             timerLabel.isHidden = true
             hideAllCards()
+            if CoreDataHelper.Players.isTopScore(top: Constants.ScoreboardVC.scoreboardSize, score: time) {
+                showTopPlayerAlert(score: time)
+            }
         }
     }
     
@@ -73,7 +88,7 @@ class GameViewController: UIViewController {
         if(emoji[card] == nil), emojiChoices.count > 0 {
             emoji[card] = emojiChoices.remove(at: emojiChoices.count.random)
         }
-        return emoji[card] ?? Strings.GameVC.questionMark
+        return emoji[card] ?? Constants.GameVC.questionMark
     }
     
     private func allMatched() -> Bool {
@@ -88,6 +103,21 @@ class GameViewController: UIViewController {
     
     private func hideAllCards() {
         for button in cardButtons { button.isHidden = true }
+    }
+    
+    private final func showTopPlayerAlert(score: Double) {
+        let alert = UIAlertController(title: Constants.GameVC.awesomeScore, message: Constants.GameVC.typeUsername, preferredStyle: .alert)
+        alert.addTextField { tf in tf.placeholder = Constants.GameVC.yourUsername }
+        let okAction = UIAlertAction(title: Constants.GameVC.ok, style: .default, handler: { [weak alert] (_) in
+            guard let textField = alert?.textFields?[0], let text = textField.text, !text.isEmpty else { return }
+            let player = Player()
+            player.username = text
+            player.score = score
+            CoreDataHelper.Players.insertNewPlayer(player: player)
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     
     //

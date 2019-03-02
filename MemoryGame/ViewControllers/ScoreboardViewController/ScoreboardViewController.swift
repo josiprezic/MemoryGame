@@ -20,20 +20,7 @@ class ScoreboardViewController: UIViewController {
     // MARK: - VARIABLES
     //
     
-    var topPlayers: [String] {
-        return [
-            "Player 1",
-            "Player 2",
-            "Player 3",
-            "Player 4",
-            "Player 5",
-            "Player 6",
-            "Player 7",
-            "Player 8",
-            "Player 9",
-            "Player 10"
-        ]
-    }
+    lazy var topPlayers = CoreDataHelper.Players.getTopPlayers(top: Constants.ScoreboardVC.scoreboardSize)
     
     //
     // MARK: - VIEW METHODS
@@ -41,19 +28,27 @@ class ScoreboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        configureUI()
+        configure()
     }
     
     //
     // MARK: - METHODS
     //
     
-    private final func configureUI() {
+    private final func configure() {
+        configureView()
+        configureTableView()
+    }
+    
+    private final func configureView() {
+        title = Constants.ScoreboardVC.title
         view.backgroundColor = UIHelper.AppColors.GRAY_DARK
+    }
+    
+    private final func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        title = Strings.ScoreboardVC.title
     }
 
 }
@@ -70,7 +65,7 @@ extension ScoreboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.backgroundColor = UIHelper.AppColors.GRAY_LIGHT
-        cell.textLabel?.text = "\(indexPath.row + 1). \(topPlayers[indexPath.row])"
+        cell.textLabel?.text = "\(indexPath.row + 1). \(topPlayers[indexPath.row].username) - \(Double(round(topPlayers[indexPath.row].score * 10)/10))"
         cell.textLabel?.font = UIFont.systemFont(ofSize: 25)
         cell.textLabel?.textColor = .white
         return cell

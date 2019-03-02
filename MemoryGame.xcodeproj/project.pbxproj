@@ -21,7 +21,9 @@
 		E2832AD122089AED00C4087A /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2832AD022089AED00C4087A /* UIHelper.swift */; };
 		E288457922286B4C00C4F9C5 /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E288457822286B4C00C4F9C5 /* ScoreboardViewController.swift */; };
 		E288457B22286B8600C4F9C5 /* ScoreboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */; };
-		E2F363E222273D6800C384C3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F363E122273D6800C384C3 /* Strings.swift */; };
+		E28FBB21222AB21B00A09B41 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28FBB20222AB21B00A09B41 /* Player.swift */; };
+		E28FBB23222AB3BE00A09B41 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28FBB22222AB3BE00A09B41 /* CoreDataHelper.swift */; };
+		E2F363E222273D6800C384C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F363E122273D6800C384C3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +44,9 @@
 		E2832AD022089AED00C4087A /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		E288457822286B4C00C4F9C5 /* ScoreboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
 		E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScoreboardViewController.storyboard; sourceTree = "<group>"; };
-		E2F363E122273D6800C384C3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E28FBB20222AB21B00A09B41 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		E28FBB22222AB3BE00A09B41 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		E2F363E122273D6800C384C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F1D8A9303A627C4A1BFA23B5 /* Pods-MemoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +114,7 @@
 			children = (
 				D72EDC9D208DD31A00B03707 /* Assets.xcassets */,
 				D72EDC9F208DD31A00B03707 /* LaunchScreen.storyboard */,
-				E2F363E122273D6800C384C3 /* Strings.swift */,
+				E2F363E122273D6800C384C3 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,6 +144,7 @@
 			children = (
 				D74CEAFF208E049E00CC8647 /* Concetration.swift */,
 				D74CEB01208E057200CC8647 /* Card.swift */,
+				E28FBB20222AB21B00A09B41 /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				E2832AD022089AED00C4087A /* UIHelper.swift */,
+				E28FBB22222AB3BE00A09B41 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -282,12 +288,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,11 +315,13 @@
 				E2832AC9220891DD00C4087A /* Extensions.swift in Sources */,
 				E288457922286B4C00C4F9C5 /* ScoreboardViewController.swift in Sources */,
 				E2832ACD220892C400C4087A /* MenuViewController.swift in Sources */,
-				E2F363E222273D6800C384C3 /* Strings.swift in Sources */,
+				E2F363E222273D6800C384C3 /* Constants.swift in Sources */,
 				D72EDC99208DD31A00B03707 /* GameViewController.swift in Sources */,
 				D74CEB00208E049E00CC8647 /* Concetration.swift in Sources */,
 				D72EDC97208DD31A00B03707 /* AppDelegate.swift in Sources */,
 				D74CEB02208E057200CC8647 /* Card.swift in Sources */,
+				E28FBB23222AB3BE00A09B41 /* CoreDataHelper.swift in Sources */,
+				E28FBB21222AB21B00A09B41 /* Player.swift in Sources */,
 				E2832AD122089AED00C4087A /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

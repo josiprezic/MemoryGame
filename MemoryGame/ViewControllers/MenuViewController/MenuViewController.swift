@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
+        configure()
     }
     
     //
@@ -43,10 +43,17 @@ class MenuViewController: UIViewController {
     // MARK: - METHODS
     //
     
-    private final func configureUI() {
+    private final func configure() {
+        configureView()
+        configureButtons()
+    }
+    
+    private final func configureView() {
+        title = Constants.MenuVC.menuTitle
         view.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        title = Strings.MenuVC.menuTitle
-        
+    }
+    
+    private final func configureButtons() {
         [btnNewGame, btnScoreboard].forEach { btn in
             btn?.layer.cornerRadius = 10.0
             btn?.clipsToBounds = true

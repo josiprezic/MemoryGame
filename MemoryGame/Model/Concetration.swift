@@ -59,7 +59,7 @@ struct Concetration {
     }
 
     mutating func chooseCard(at index: Int) {
-        assert(cards.indices.contains(index), Strings.Concetration.indexNotValid)
+        assert(cards.indices.contains(index), Constants.Concetration.indexNotValid)
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFacedUpCard, matchIndex != index {
                 if cards[matchIndex] == cards[index] {

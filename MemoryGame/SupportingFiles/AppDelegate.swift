@@ -12,33 +12,27 @@ import RevealingSplashView
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //
+    // MARK: - VARIABLES
+    //
+    
     var window: UIWindow?
     
+    //
+    // MARK: - APP DELEGATE METHODS
+    //
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController.init(rootViewController: MenuViewController.fromStoryboard())
         self.window?.rootViewController = navigationController
-        
         UINavigationBar.appearance().barTintColor = UIHelper.AppColors.GRAY_LIGHT
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
-
         self.window?.makeKeyAndVisible()
         showSplashView()
-
         return true
     }
-    
-    func applicationWillResignActive(_ application: UIApplication) { }
-
-    func applicationDidEnterBackground(_ application: UIApplication) { }
-
-    func applicationWillEnterForeground(_ application: UIApplication) { }
-
-    func applicationDidBecomeActive(_ application: UIApplication) { }
-
-    func applicationWillTerminate(_ application: UIApplication) { }
     
     //
     // MARK: - CUSTOM METHODS
@@ -53,7 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashView.useCustomIconColor = false
         splashView.iconColor = splashIconColor
         splashView.delay = delay
-        
         self.window?.addSubview(splashView)
         splashView.startAnimation() {}
     }

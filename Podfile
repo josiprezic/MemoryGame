@@ -7,6 +7,7 @@ target 'MemoryGame' do
 
   # Pods for MemoryGame
   pod 'RevealingSplashView'
+  pod 'RealmSwift'
 
 
 end
