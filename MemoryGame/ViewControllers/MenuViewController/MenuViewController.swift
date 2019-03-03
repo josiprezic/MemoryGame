@@ -16,6 +16,7 @@ class MenuViewController: UIViewController {
     
     @IBOutlet var btnNewGame: UIButton!
     @IBOutlet var btnScoreboard: UIButton!
+    @IBOutlet var btnSettings: UIButton!
     @IBOutlet var imgLogo: UIImageView!
     
     //
@@ -39,6 +40,11 @@ class MenuViewController: UIViewController {
         navigationController?.pushViewController(ScoreboardViewController.fromStoryboard(), animated: true)
     }
     
+    @IBAction func btnSettingsPressed(_ sender: UIButton) {
+        navigationController?.pushViewController(SettingsViewController.fromStoryboard(), animated: true)
+    }
+    
+    
     //
     // MARK: - METHODS
     //
@@ -54,7 +60,7 @@ class MenuViewController: UIViewController {
     }
     
     private final func configureButtons() {
-        [btnNewGame, btnScoreboard].forEach { btn in
+        [btnNewGame, btnScoreboard, btnSettings].forEach { btn in
             btn?.layer.cornerRadius = 10.0
             btn?.clipsToBounds = true
         }

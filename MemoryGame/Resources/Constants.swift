@@ -33,4 +33,8 @@ struct Constants {
         static let title            = "Scoreboard"
         static let scoreboardSize   = 10
     }
+    
+    struct SettingsVC {
+        static let title = "Settings"
+    }
 }

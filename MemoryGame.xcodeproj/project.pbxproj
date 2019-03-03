@@ -23,6 +23,8 @@
 		E288457B22286B8600C4F9C5 /* ScoreboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */; };
 		E28FBB21222AB21B00A09B41 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28FBB20222AB21B00A09B41 /* Player.swift */; };
 		E28FBB23222AB3BE00A09B41 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28FBB22222AB3BE00A09B41 /* CoreDataHelper.swift */; };
+		E2A44D3E222C870900BAE4D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A44D3D222C870900BAE4D6 /* SettingsViewController.swift */; };
+		E2A44D42222C878D00BAE4D6 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A44D41222C878D00BAE4D6 /* SettingsViewController.storyboard */; };
 		E2F363E222273D6800C384C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F363E122273D6800C384C3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScoreboardViewController.storyboard; sourceTree = "<group>"; };
 		E28FBB20222AB21B00A09B41 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E28FBB22222AB3BE00A09B41 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		E2A44D3D222C870900BAE4D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E2A44D41222C878D00BAE4D6 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		E2F363E122273D6800C384C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F1D8A9303A627C4A1BFA23B5 /* Pods-MemoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +139,7 @@
 				E2832ACB2208929600C4087A /* MenuViewController */,
 				E2832ACA2208927D00C4087A /* GameViewController */,
 				E288457722286B2700C4F9C5 /* ScoreboardViewController */,
+				E2A44D3C222C86F200BAE4D6 /* SettingsViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +188,15 @@
 				E288457A22286B8600C4F9C5 /* ScoreboardViewController.storyboard */,
 			);
 			path = ScoreboardViewController;
+			sourceTree = "<group>";
+		};
+		E2A44D3C222C86F200BAE4D6 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E2A44D3D222C870900BAE4D6 /* SettingsViewController.swift */,
+				E2A44D41222C878D00BAE4D6 /* SettingsViewController.storyboard */,
+			);
+			path = SettingsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,7 @@
 				E2832ACF220892D200C4087A /* MenuViewController.storyboard in Resources */,
 				D72EDCA1208DD31A00B03707 /* LaunchScreen.storyboard in Resources */,
 				D72EDC9E208DD31A00B03707 /* Assets.xcassets in Resources */,
+				E2A44D42222C878D00BAE4D6 /* SettingsViewController.storyboard in Resources */,
 				D72EDC9C208DD31A00B03707 /* GameViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +338,7 @@
 				E28FBB23222AB3BE00A09B41 /* CoreDataHelper.swift in Sources */,
 				E28FBB21222AB21B00A09B41 /* Player.swift in Sources */,
 				E2832AD122089AED00C4087A /* UIHelper.swift in Sources */,
+				E2A44D3E222C870900BAE4D6 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
