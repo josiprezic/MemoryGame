@@ -66,3 +66,8 @@ extension Results {
     }
 }
 
+extension Float {
+    var cgFloat: CGFloat {
+        return CGFloat(self)
+    }
+}

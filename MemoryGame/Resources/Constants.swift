@@ -36,5 +36,6 @@ struct Constants {
     
     struct SettingsVC {
         static let title = "Settings"
+        static let brightness = "Brightness"
     }
 }

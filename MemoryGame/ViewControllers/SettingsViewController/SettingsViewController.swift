@@ -8,13 +8,15 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UITableViewController {
     
     //
     // MARK: - OUTLETS
     //
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var brightnessTitleCell: UITableViewCell!
+    @IBOutlet private var brightnessSliderCell: UITableViewCell!
+    @IBOutlet private var brightnessSlider: UISlider!
     
     //
     // MARK: - VIEW METHODS
@@ -23,6 +25,14 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configure()
+    }
+    
+    //
+    // MARK: - ACTIONS
+    //
+    
+    @IBAction private func sliderValueChanged(_ sender: UISlider) {
+        UIScreen.main.brightness = sender.value.cgFloat
     }
     
     //
@@ -41,6 +51,16 @@ class SettingsViewController: UIViewController {
     
     private final func configureTableView() {
         tableView.backgroundColor = UIHelper.AppColors.GRAY_DARK
+        tableView.tableFooterView = UIView()
+        
+        [brightnessTitleCell, brightnessSliderCell].forEach { cell in
+            cell?.tintColor = .white
+            cell?.textLabel?.textColor = .white
+            cell?.backgroundColor = UIHelper.AppColors.GRAY_LIGHT
+            cell?.selectionStyle = .none
+        }
+        
+        brightnessTitleCell.textLabel?.text = Constants.SettingsVC.brightness
     }
 }
 
@@ -48,14 +68,13 @@ class SettingsViewController: UIViewController {
 // MARK: - EXTENSION - UITableViewDelegate, UITableViewDataSource
 //
 
-extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+extension SettingsViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        return cell
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return ""
     }
 }
