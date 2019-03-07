@@ -16,6 +16,8 @@ class SettingsViewController: UITableViewController {
     
     @IBOutlet private var brightnessTitleCell: UITableViewCell!
     @IBOutlet private var brightnessSliderCell: UITableViewCell!
+    @IBOutlet private var colorPickerCell: UITableViewCell!
+    @IBOutlet private var deleteScoreboardDataCell: UITableViewCell!
     @IBOutlet private var brightnessSlider: UISlider!
     
     //
@@ -51,9 +53,9 @@ class SettingsViewController: UITableViewController {
     
     private final func configureTableView() {
         tableView.backgroundColor = UIHelper.AppColors.GRAY_DARK
-        tableView.tableFooterView = UIView()
-        
-        [brightnessTitleCell, brightnessSliderCell].forEach { cell in
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.001))
+
+        [brightnessTitleCell, brightnessSliderCell, colorPickerCell, deleteScoreboardDataCell].forEach { cell in
             cell?.tintColor = .white
             cell?.textLabel?.textColor = .white
             cell?.backgroundColor = UIHelper.AppColors.GRAY_LIGHT
@@ -61,6 +63,12 @@ class SettingsViewController: UITableViewController {
         }
         
         brightnessTitleCell.textLabel?.text = Constants.SettingsVC.brightness
+        
+        colorPickerCell.textLabel?.text = Constants.SettingsVC.cardBackgroundColor
+        colorPickerCell.accessoryType = .disclosureIndicator
+        
+        deleteScoreboardDataCell.textLabel?.text = Constants.SettingsVC.deleteScoreboardData
+        deleteScoreboardDataCell.textLabel?.textColor = .red
     }
 }
 
@@ -71,10 +79,29 @@ class SettingsViewController: UITableViewController {
 extension SettingsViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return ""
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
+        headerView.backgroundColor = UIHelper.AppColors.GRAY_DARK
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1, indexPath.row == 0 {
+            // color picker cell
+        } else if indexPath.section == 2, indexPath.row == 0 {
+            // delete scoreboard data cell
+        }
+        // other cells
     }
 }

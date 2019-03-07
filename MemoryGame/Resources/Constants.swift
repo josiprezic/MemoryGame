@@ -11,31 +11,33 @@ import Foundation
 struct Constants {
     
     struct Concetration {
-        static let indexNotValid    = "Concetration.chooseCard: choosen index is not valid"
+        static let indexNotValid        = "Concetration.chooseCard: choosen index is not valid"
     }
     
     struct MenuVC {
-        static let menuTitle        = "Menu"
+        static let menuTitle            = "Menu"
     }
     
     struct GameVC {
-        static let emojis           = ["🍒","🐞","🐌","🍗","🎧","🇵🇱","😀","🥶", "🎃", "⛑", "🐥", "🎱"]
-        static let title            = "Memory Game"
-        static let timer            = "Timer"
-        static let questionMark     = "?"
-        static let ok               = "OK"
-        static let awesomeScore     = "Awesome score!"
-        static let typeUsername     = "Please type your username in the box below."
-        static let yourUsername     = "Your username"
+        static let emojis               = ["🍒","🐞","🐌","🍗","🎧","🇵🇱","😀","🥶", "🎃", "⛑", "🐥", "🎱"]
+        static let title                = "Memory Game"
+        static let timer                = "Timer"
+        static let questionMark         = "?"
+        static let ok                   = "OK"
+        static let awesomeScore         = "Awesome score!"
+        static let typeUsername         = "Please type your username in the box below."
+        static let yourUsername         = "Your username"
     }
     
     struct ScoreboardVC {
-        static let title            = "Scoreboard"
-        static let scoreboardSize   = 10
+        static let title                = "Scoreboard"
+        static let scoreboardSize       = 10
     }
     
     struct SettingsVC {
-        static let title = "Settings"
-        static let brightness = "Brightness"
+        static let title                = "Settings"
+        static let brightness           = "Brightness"
+        static let cardBackgroundColor  = "Card background color"
+        static let deleteScoreboardData = "Delete scoreboard data"
     }
 }

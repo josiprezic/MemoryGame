@@ -76,37 +76,18 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="49" id="xp4-3y-Dbw">
-                                        <rect key="frame" x="0.0" y="203" width="375" height="49"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xp4-3y-Dbw" id="sOZ-b0-dng">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="17b-aj-Pzr">
-                                                    <rect key="frame" x="18" y="9.5" width="339" height="31"/>
-                                                </slider>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="17b-aj-Pzr" secondAttribute="trailing" constant="20" id="7Mz-qA-9c8"/>
-                                                <constraint firstItem="17b-aj-Pzr" firstAttribute="leading" secondItem="sOZ-b0-dng" secondAttribute="leading" constant="20" id="SMj-2T-EAF"/>
-                                                <constraint firstItem="17b-aj-Pzr" firstAttribute="centerY" secondItem="sOZ-b0-dng" secondAttribute="centerY" id="pit-4r-8KG"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-3" id="JJo-Ea-Chf">
+                            <tableViewSection headerTitle="Section-3" id="MiA-Ov-BHD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="49" id="bCg-jl-JgM">
-                                        <rect key="frame" x="0.0" y="280" width="375" height="49"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="49" id="BTK-Vd-6AN">
+                                        <rect key="frame" x="0.0" y="231" width="375" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bCg-jl-JgM" id="BnI-YL-J63">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BTK-Vd-6AN" id="D49-3O-356">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="48.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6B-ms-kLn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBZ-D6-r64">
                                                     <rect key="frame" x="20" y="14" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -114,27 +95,8 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="P6B-ms-kLn" firstAttribute="leading" secondItem="BnI-YL-J63" secondAttribute="leading" constant="20" id="LKE-Rc-new"/>
-                                                <constraint firstItem="P6B-ms-kLn" firstAttribute="centerY" secondItem="BnI-YL-J63" secondAttribute="centerY" id="v7e-D4-mVK"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="49" id="qyL-QV-eju">
-                                        <rect key="frame" x="0.0" y="329" width="375" height="49"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qyL-QV-eju" id="rBr-y7-WCr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NVL-Cv-xfD">
-                                                    <rect key="frame" x="18" y="9.5" width="339" height="31"/>
-                                                </slider>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="NVL-Cv-xfD" firstAttribute="centerY" secondItem="rBr-y7-WCr" secondAttribute="centerY" id="1g8-Wn-wHY"/>
-                                                <constraint firstAttribute="trailing" secondItem="NVL-Cv-xfD" secondAttribute="trailing" constant="20" id="DBt-1D-Qzp"/>
-                                                <constraint firstItem="NVL-Cv-xfD" firstAttribute="leading" secondItem="rBr-y7-WCr" secondAttribute="leading" constant="20" id="X8d-ne-iTL"/>
+                                                <constraint firstItem="FBZ-D6-r64" firstAttribute="centerY" secondItem="D49-3O-356" secondAttribute="centerY" id="ZL2-uj-N9v"/>
+                                                <constraint firstItem="FBZ-D6-r64" firstAttribute="leading" secondItem="D49-3O-356" secondAttribute="leading" constant="20" id="lXj-Dk-5Z9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -151,6 +113,8 @@
                         <outlet property="brightnessSlider" destination="sIK-ef-tIX" id="RIo-gW-qGF"/>
                         <outlet property="brightnessSliderCell" destination="e4Q-uG-bPO" id="5gT-1Q-9Jo"/>
                         <outlet property="brightnessTitleCell" destination="Zcj-Sz-2s9" id="3ta-J2-Fy4"/>
+                        <outlet property="colorPickerCell" destination="IV3-sc-3Wd" id="tXC-Ie-JtX"/>
+                        <outlet property="deleteScoreboardDataCell" destination="BTK-Vd-6AN" id="adC-6b-3E3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWO-cQ-IOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
