@@ -51,6 +51,13 @@ struct CoreDataHelper {
             let result = realm.objects(Player.self).sorted(by: { (lhs, rhs) -> Bool in return lhs.score < rhs.score})
             return Array(result.prefix(10))
         }
+        
+        static func deleteAllPlayers() {
+            guard let realm = try? Realm() else { return }
+            realm.beginWrite()
+            realm.deleteAll()
+            try? realm.commitWrite()
+        }
     }
     
 }

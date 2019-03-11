@@ -70,6 +70,15 @@ class SettingsViewController: UITableViewController {
         deleteScoreboardDataCell.textLabel?.text = Constants.SettingsVC.deleteScoreboardData
         deleteScoreboardDataCell.textLabel?.textColor = .red
     }
+    
+    private final func handleDeleteAllPlayers() {
+        let alert = UIAlertController(title: "Are you sure?", message: "All data will be deleted.", preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in CoreDataHelper.Players.deleteAllPlayers() })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
 }
 
 //
@@ -100,7 +109,7 @@ extension SettingsViewController {
         if indexPath.section == 1, indexPath.row == 0 {
             // color picker cell
         } else if indexPath.section == 2, indexPath.row == 0 {
-            // delete scoreboard data cell
+            handleDeleteAllPlayers()
         }
         // other cells
     }
