@@ -89,6 +89,7 @@ class SettingsViewController: UITableViewController {
         }
         
         brightnessTitleCell.textLabel?.text = Constants.SettingsVC.brightness
+        brightnessSlider.value = Float(UIScreen.main.brightness)
         
         colorPickerCell.textLabel?.text = Constants.SettingsVC.cardBackgroundColor
         colorPickerCell.accessoryType = .disclosureIndicator
