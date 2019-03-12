@@ -26,7 +26,7 @@ class SettingsViewController: UITableViewController {
     //
     
     lazy var colorPicker: UIView = {
-        let pickerContainer = UIView(frame: view.frame)
+        let pickerContainer = UIView(frame: UIScreen.main.bounds)
         pickerContainer.backgroundColor = .black
         let pickerSize: CGFloat = UIScreen.main.bounds.maxX - 60
         let x = UIScreen.main.bounds.midX - (pickerSize/2)
@@ -36,11 +36,12 @@ class SettingsViewController: UITableViewController {
         picker.delegate = self
         picker.padding = 0
         picker.stroke = 3
+        picker.adjustToColor(UserDefaultsHelper.cardColor)
         picker.addButton.plusIconLayer?.isHidden = true
         picker.shadeSlider.isHidden = true
         picker.hexLabel.isHidden = true
         pickerContainer.addSubview(picker)
-        view.addSubview(pickerContainer)
+        UIApplication.shared.keyWindow?.addSubview(pickerContainer)
         picker.center = pickerContainer.center
         pickerContainer.isHidden = true
         return pickerContainer
@@ -154,6 +155,7 @@ extension SettingsViewController {
 
 extension SettingsViewController: ChromaColorPickerDelegate {
     func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
+        UserDefaultsHelper.cardColor = color
         tableView.isScrollEnabled = true
         self.colorPicker.alpha = 1
         UIView.animate(withDuration: 0.2,

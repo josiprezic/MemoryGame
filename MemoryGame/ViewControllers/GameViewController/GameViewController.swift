@@ -20,7 +20,8 @@ class GameViewController: UIViewController {
     private var timer = Timer()
     private var seconds = 0.0
     private var numberOfPairsOfCards: Int { return (cardButtons.count + 1) / 2 }
-
+    private var cardColor = UserDefaultsHelper.cardColor
+    
     //
     // MARK: - VIEW METHODS
     //
@@ -48,6 +49,7 @@ class GameViewController: UIViewController {
         cardButtons.forEach { btn in
             btn.layer.cornerRadius = 5.0
             btn.clipsToBounds = true
+            btn.backgroundColor = cardColor
         }
     }
     
@@ -68,7 +70,7 @@ class GameViewController: UIViewController {
             }
             else {
                 button.setTitle("", for: .normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : cardColor
             }
         }
         
