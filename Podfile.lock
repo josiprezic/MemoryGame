@@ -1,4 +1,5 @@
 PODS:
+  - ChromaColorPicker (1.7.2)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
   - Realm/Headers (3.13.1)
@@ -7,20 +8,23 @@ PODS:
   - RevealingSplashView (0.6.0)
 
 DEPENDENCIES:
+  - ChromaColorPicker
   - RealmSwift
   - RevealingSplashView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ChromaColorPicker
     - Realm
     - RealmSwift
     - RevealingSplashView
 
 SPEC CHECKSUMS:
+  ChromaColorPicker: 78194fbae9f342d3781ac178c4d92c7652197d18
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
 
-PODFILE CHECKSUM: 410048fa998a5a75a1bcf0441c72bf0024e4daff
+PODFILE CHECKSUM: 5dc7c9129f639b514f1304027e5145aae8035738
 
 COCOAPODS: 1.5.3

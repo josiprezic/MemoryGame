@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChromaColorPicker
 
 class SettingsViewController: UITableViewController {
     
@@ -19,6 +20,31 @@ class SettingsViewController: UITableViewController {
     @IBOutlet private var colorPickerCell: UITableViewCell!
     @IBOutlet private var deleteScoreboardDataCell: UITableViewCell!
     @IBOutlet private var brightnessSlider: UISlider!
+    
+    //
+    // MARK: - VARIABLES
+    //
+    
+    lazy var colorPicker: UIView = {
+        let pickerContainer = UIView(frame: view.frame)
+        pickerContainer.backgroundColor = .black
+        let pickerSize: CGFloat = UIScreen.main.bounds.maxX - 60
+        let x = UIScreen.main.bounds.midX - (pickerSize/2)
+        let y = UIScreen.main.bounds.midY - (pickerSize/2)
+        let frame = CGRect(x: x, y: y, width: pickerSize, height: pickerSize)
+        let picker = ChromaColorPicker(frame: frame)
+        picker.delegate = self
+        picker.padding = 0
+        picker.stroke = 3
+        picker.addButton.plusIconLayer?.isHidden = true
+        picker.shadeSlider.isHidden = true
+        picker.hexLabel.isHidden = true
+        pickerContainer.addSubview(picker)
+        view.addSubview(pickerContainer)
+        picker.center = pickerContainer.center
+        pickerContainer.isHidden = true
+        return pickerContainer
+    }()
     
     //
     // MARK: - VIEW METHODS
@@ -79,6 +105,13 @@ class SettingsViewController: UITableViewController {
         alert.addAction(cancelAction)
         present(alert, animated: true)
     }
+    
+    private final func showPickerView() {
+        tableView.isScrollEnabled = false
+        colorPicker.alpha = 0
+        colorPicker.isHidden = false
+        UIView.animate(withDuration: 0.2) { self.colorPicker.alpha = 1 }
+    }
 }
 
 //
@@ -107,10 +140,23 @@ extension SettingsViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1, indexPath.row == 0 {
-            // color picker cell
+            showPickerView()
         } else if indexPath.section == 2, indexPath.row == 0 {
             handleDeleteAllPlayers()
         }
-        // other cells
+    }
+}
+
+//
+// MARK: - EXTENSION - ChromaColorPickerDelegate
+//
+
+extension SettingsViewController: ChromaColorPickerDelegate {
+    func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
+        tableView.isScrollEnabled = true
+        self.colorPicker.alpha = 1
+        UIView.animate(withDuration: 0.2,
+                       animations: { self.colorPicker.alpha = 0 },
+                       completion: { _ in self.colorPicker.isHidden = true })
     }
 }
