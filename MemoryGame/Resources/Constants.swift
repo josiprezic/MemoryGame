@@ -39,5 +39,9 @@ struct Constants {
         static let brightness           = "Brightness"
         static let cardBackgroundColor  = "Card background color"
         static let deleteScoreboardData = "Delete scoreboard data"
+        static let areYouSure           = "Are you sure?"
+        static let allDataDeleted       = "All data will be deleted."
+        static let delete               = "Delete"
+        static let cancel               = "Cancel"
     }
 }

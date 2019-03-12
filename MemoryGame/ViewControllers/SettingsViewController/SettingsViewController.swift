@@ -99,9 +99,9 @@ class SettingsViewController: UITableViewController {
     }
     
     private final func handleDeleteAllPlayers() {
-        let alert = UIAlertController(title: "Are you sure?", message: "All data will be deleted.", preferredStyle: .alert)
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in CoreDataHelper.Players.deleteAllPlayers() })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let alert = UIAlertController(title: Constants.SettingsVC.areYouSure, message: Constants.SettingsVC.allDataDeleted, preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: Constants.SettingsVC.delete, style: .destructive, handler: { _ in CoreDataHelper.Players.deleteAllPlayers() })
+        let cancelAction = UIAlertAction(title: Constants.SettingsVC.cancel, style: .cancel, handler: nil)
         alert.addAction(deleteAction)
         alert.addAction(cancelAction)
         present(alert, animated: true)
