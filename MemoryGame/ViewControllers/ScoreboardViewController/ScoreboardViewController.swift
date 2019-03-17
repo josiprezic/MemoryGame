@@ -14,7 +14,11 @@ class ScoreboardViewController: UIViewController {
     // MARK: - OUTLETS
     //
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var noDataContainerView: UIView!
+    @IBOutlet private var imgVwNoData: UIImageView!
+    @IBOutlet private var lblNoData: UILabel!
+    
     
     //
     // MARK: - VARIABLES
@@ -49,6 +53,19 @@ class ScoreboardViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIHelper.AppColors.GRAY_DARK
+        if topPlayers.isEmpty {
+            showEmptyDataSet()
+        }
+    }
+    
+    private final func showEmptyDataSet() {
+        tableView.isHidden = true
+        imgVwNoData.image = #imageLiteral(resourceName: "no_data")
+        lblNoData.text = Constants.ScoreboardVC.noData
+        lblNoData.textColor = .white
+        noDataContainerView.backgroundColor = .clear
+        noDataContainerView.alpha = 0.5
+        noDataContainerView.isHidden = false
     }
 
 }

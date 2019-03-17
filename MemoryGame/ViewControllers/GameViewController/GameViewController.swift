@@ -38,6 +38,7 @@ class GameViewController: UIViewController {
     private final func configure() {
         configureView()
         configureCollectionView()
+        configureTimerLabel()
     }
     
     private final func configureView() {
@@ -51,6 +52,10 @@ class GameViewController: UIViewController {
             btn.clipsToBounds = true
             btn.backgroundColor = cardColor
         }
+    }
+    
+    private final func configureTimerLabel() {
+        timerLabel.textColor = UserDefaultsHelper.cardColor
     }
     
     func scheduledTimerWithTimeInterval(){

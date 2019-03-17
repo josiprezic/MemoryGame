@@ -31,6 +31,7 @@ struct Constants {
     
     struct ScoreboardVC {
         static let title                = "Scoreboard"
+        static let noData               = "No players to show"
         static let scoreboardSize       = 10
     }
     

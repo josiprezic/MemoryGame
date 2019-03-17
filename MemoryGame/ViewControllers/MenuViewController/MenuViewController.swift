@@ -57,6 +57,7 @@ class MenuViewController: UIViewController {
     private final func configureView() {
         title = Constants.MenuVC.menuTitle
         view.backgroundColor = UIHelper.AppColors.GRAY_DARK
+        navigationController?.navigationBar.barStyle = .black
     }
     
     private final func configureButtons() {
