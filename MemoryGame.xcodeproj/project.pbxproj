@@ -486,7 +486,7 @@
 				DEVELOPMENT_TEAM = TLWQ546V2V;
 				INFOPLIST_FILE = MemoryGame/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jopa.MemoryGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josiprezic.MemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,7 +502,7 @@
 				DEVELOPMENT_TEAM = TLWQ546V2V;
 				INFOPLIST_FILE = MemoryGame/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jopa.MemoryGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josiprezic.MemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
