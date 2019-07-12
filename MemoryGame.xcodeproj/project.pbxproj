@@ -15,6 +15,7 @@
 		D72EDCA1208DD31A00B03707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EDC9F208DD31A00B03707 /* LaunchScreen.storyboard */; };
 		D74CEB00208E049E00CC8647 /* Concetration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CEAFF208E049E00CC8647 /* Concetration.swift */; };
 		D74CEB02208E057200CC8647 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CEB01208E057200CC8647 /* Card.swift */; };
+		D7AC288022D8AB4D00C98473 /* MemoryGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC287F22D8AB4D00C98473 /* MemoryGameUITests.swift */; };
 		E2809EE722385A2B00334193 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2809EE622385A2B00334193 /* UserDefaultsHelper.swift */; };
 		E2832AC9220891DD00C4087A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2832AC8220891DD00C4087A /* Extensions.swift */; };
 		E2832ACD220892C400C4087A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2832ACC220892C400C4087A /* MenuViewController.swift */; };
@@ -29,6 +30,16 @@
 		E2F363E222273D6800C384C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F363E122273D6800C384C3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D7AC288222D8AB4D00C98473 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D72EDC8B208DD31A00B03707 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D72EDC92208DD31A00B03707;
+			remoteInfo = MemoryGame;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		BDC10C7C430254D64FF1CECE /* Pods-MemoryGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame.release.xcconfig"; sourceTree = "<group>"; };
 		D03E29AB2C34C049565C54A1 /* Pods_MemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +52,9 @@
 		D72EDCA2208DD31A00B03707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74CEAFF208E049E00CC8647 /* Concetration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concetration.swift; sourceTree = "<group>"; };
 		D74CEB01208E057200CC8647 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D7AC287D22D8AB4D00C98473 /* MemoryGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7AC287F22D8AB4D00C98473 /* MemoryGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameUITests.swift; sourceTree = "<group>"; };
+		D7AC288122D8AB4D00C98473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2809EE622385A2B00334193 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		E2832AC8220891DD00C4087A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E2832ACC220892C400C4087A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +76,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFC2605A96C5819D68BE39F /* Pods_MemoryGame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7AC287A22D8AB4D00C98473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D72EDC95208DD31A00B03707 /* MemoryGame */,
+				D7AC287E22D8AB4D00C98473 /* MemoryGameUITests */,
 				D72EDC94208DD31A00B03707 /* Products */,
 				93BF33E780A3A1D3687EB440 /* Pods */,
 				1FCFF127E369F15BC5846A97 /* Frameworks */,
@@ -99,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D72EDC93208DD31A00B03707 /* MemoryGame.app */,
+				D7AC287D22D8AB4D00C98473 /* MemoryGameUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +136,15 @@
 				E2832AC5220890C400C4087A /* ViewControllers */,
 			);
 			path = MemoryGame;
+			sourceTree = "<group>";
+		};
+		D7AC287E22D8AB4D00C98473 /* MemoryGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC287F22D8AB4D00C98473 /* MemoryGameUITests.swift */,
+				D7AC288122D8AB4D00C98473 /* Info.plist */,
+			);
+			path = MemoryGameUITests;
 			sourceTree = "<group>";
 		};
 		E2832AC32208909000C4087A /* Resources */ = {
@@ -224,19 +256,42 @@
 			productReference = D72EDC93208DD31A00B03707 /* MemoryGame.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D7AC287C22D8AB4D00C98473 /* MemoryGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7AC288422D8AB4D00C98473 /* Build configuration list for PBXNativeTarget "MemoryGameUITests" */;
+			buildPhases = (
+				D7AC287922D8AB4D00C98473 /* Sources */,
+				D7AC287A22D8AB4D00C98473 /* Frameworks */,
+				D7AC287B22D8AB4D00C98473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7AC288322D8AB4D00C98473 /* PBXTargetDependency */,
+			);
+			name = MemoryGameUITests;
+			productName = MemoryGameUITests;
+			productReference = D7AC287D22D8AB4D00C98473 /* MemoryGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D72EDC8B208DD31A00B03707 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Josip Rezic";
 				TargetAttributes = {
 					D72EDC92208DD31A00B03707 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					D7AC287C22D8AB4D00C98473 = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D72EDC92208DD31A00B03707;
 					};
 				};
 			};
@@ -254,6 +309,7 @@
 			projectRoot = "";
 			targets = (
 				D72EDC92208DD31A00B03707 /* MemoryGame */,
+				D7AC287C22D8AB4D00C98473 /* MemoryGameUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +325,13 @@
 				D72EDC9E208DD31A00B03707 /* Assets.xcassets in Resources */,
 				E2A44D42222C878D00BAE4D6 /* SettingsViewController.storyboard in Resources */,
 				D72EDC9C208DD31A00B03707 /* GameViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7AC287B22D8AB4D00C98473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,18 +365,14 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -322,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -348,7 +407,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7AC287922D8AB4D00C98473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7AC288022D8AB4D00C98473 /* MemoryGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7AC288322D8AB4D00C98473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D72EDC92208DD31A00B03707 /* MemoryGame */;
+			targetProxy = D7AC288222D8AB4D00C98473 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D72EDC9A208DD31A00B03707 /* GameViewController.storyboard */ = {
@@ -483,10 +558,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLWQ546V2V;
+				DEVELOPMENT_TEAM = 9V923T224A;
 				INFOPLIST_FILE = MemoryGame/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.josiprezic.MemoryGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josiprezicc.MemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,13 +574,54 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLWQ546V2V;
+				DEVELOPMENT_TEAM = 9V923T224A;
 				INFOPLIST_FILE = MemoryGame/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.josiprezic.MemoryGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josiprezicc.MemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7AC288522D8AB4D00C98473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V923T224A;
+				INFOPLIST_FILE = MemoryGameUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cc.productDemo.MemoryGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MemoryGame;
+			};
+			name = Debug;
+		};
+		D7AC288622D8AB4D00C98473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V923T224A;
+				INFOPLIST_FILE = MemoryGameUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cc.productDemo.MemoryGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MemoryGame;
 			};
 			name = Release;
 		};
@@ -526,6 +642,15 @@
 			buildConfigurations = (
 				D72EDCA6208DD31A00B03707 /* Debug */,
 				D72EDCA7208DD31A00B03707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7AC288422D8AB4D00C98473 /* Build configuration list for PBXNativeTarget "MemoryGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7AC288522D8AB4D00C98473 /* Debug */,
+				D7AC288622D8AB4D00C98473 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
